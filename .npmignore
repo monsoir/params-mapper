@@ -2,6 +2,7 @@
 config/
 lib/
 test/
+example/
 .gitignore
 .npmignore
 tsconfig.*

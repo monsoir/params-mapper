@@ -8,6 +8,7 @@
     "prepublish": "npm run build",
     "dev": "rm -fr ./dist && tsc -p tsconfig.dev.json",
     "build": "rm -fr ./dist && tsc -p tsconfig.prod.json",
+    "example": "npm run dev && node ./example/index.js",
     "test": "ts-mocha -p ./tsconfig.test.json ./test/*"
   },
   "keywords": [],
