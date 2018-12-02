@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "test": "tsc -p tsconfig.test.json && mocha ./test-dist/*"
+    "dev": "rm -fr ./dist && tsc -p tsconfig.dev.json",
+    "build": "rm -fr ./dist && tsc -p tsconfig.prod.json",
+    "test": "ts-mocha -p ./tsconfig.test.json ./test/*"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "@types/mocha": "^5.2.5",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
+    "ts-mocha": "^2.0.0",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.1",
     "typescript": "^3.2.1"
