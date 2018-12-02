@@ -3,14 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
+    "prepublish": "npm run build",
     "dev": "rm -fr ./dist && tsc -p tsconfig.dev.json",
     "build": "rm -fr ./dist && tsc -p tsconfig.prod.json",
     "test": "ts-mocha -p ./tsconfig.test.json ./test/*"
   },
   "keywords": [],
-  "author": "",
+  "author": "monsoir <monwingyeung@gmail.com>",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Monsoir/params-mapper.git"
+  },
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
