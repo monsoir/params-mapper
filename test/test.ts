@@ -4,6 +4,28 @@ import Validator from './Validator';
 
 import { BaseParamObject, autoTransfer, ITransformPayload } from '../lib/index';
 
+describe('Check if instance has the property', () => {
+  it('Instance should have the property', () => {
+    @autoTransfer({})
+    class A extends BaseParamObject {}
+
+    const temp = new A({});
+    expect(temp.transformationPayload).is.not.undefined;
+  });
+});
+
+describe('Function autoTransfer also return the Class', () => {
+  it('Class wrapped by function autoTransfer should also return itself, and should have the property', () => {
+    class A extends BaseParamObject {}
+    const WrappedA = autoTransfer({})(A) as any;
+
+    expect(WrappedA).is.not.undefined;
+
+    const temp = new WrappedA({});
+    expect(temp.transformationPayload).is.not.undefined;
+  });
+});
+
 interface IPayload {
   [key: string]: ITransformPayload;
 }

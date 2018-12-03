@@ -38,6 +38,7 @@ export function autoTransfer(transformationPayload: ITransferPayloadParam) {
     Object.defineProperty(target.prototype, 'transformationPayload', {
       value: transformationPayload,
     });
+    return target;
   });
 }
 
