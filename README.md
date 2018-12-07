@@ -2,12 +2,22 @@
 
 将前端页面参数映射到返回给服务端的参数
 
+Install
+
+```sh
+npm i params-mapper
+```
+
 Code this:
 
 ```js
 const paramsMapper = require('params-mapper');
 const BaseParamObject = paramsMapper.BaseParamObject;
 const autoTransfer = paramsMapper.autoTransfer;
+
+// or
+
+import { autoTransfer, BaseParamObject } from 'params-mapper';
 
 const TransformationPayload = {
     emptyObject: {
