@@ -3,7 +3,8 @@
   "compilerOptions": {
     "outDir": "./dist",
     "removeComments": true,
-    "sourceMap": false
+    "sourceMap": false,
+    "declaration": true
   },
   "include": [
     "./lib"

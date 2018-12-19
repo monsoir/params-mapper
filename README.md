@@ -1,5 +1,7 @@
 # params-mapper
 
+⚠️ 请移步到重构后的 [params-mapper](https://github.com/Monsoir/params-mapper2)
+
 将前端页面参数映射到返回给服务端的参数
 
 Install
